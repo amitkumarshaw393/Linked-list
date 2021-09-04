@@ -50,6 +50,7 @@ int main(){
     node *head  = new node(); node *second = new node(); node *third = new node();
     node *four  = new node(); node *five = new node(); node *six = new node();
     node *seven  = new node(); node *eight = new node(); node *nine = new node();
+    node *ten = new node();
     
     head -> data = 5;   head -> next = second;
     second->data = 1;   second ->next = third;
@@ -59,7 +60,8 @@ int main(){
     six -> data = 2;    six ->next = seven;
     seven -> data = 7;  seven -> next = eight;
     eight->data = 9;    eight ->next = nine;
-    nine -> data = 18;  nine ->next = NULL;
+    nine -> data = 18;  nine ->next = ten;
+    ten->data=20;ten->next=NULL;
     
     
     //printList(head);
