@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+struct node{
+	int data;
+	node *next;
+};
+print(node *n)
+{
+	int count=0;
+	while(n!=0)
+	{
+		cout<<n->data<<" ";
+		n=n->next;
+		count++;
+	}
+	cout<<endl<<"total number of element = "<<count;
+}
+
+int main(void)
+{
+node *head=new node();
+node *first=new node();
+node *second=new node();
+node *third=new node();
+node *fouth=new node();
+node *fifth=new node();
+head->data=1;
+head->next=first;
+first->data=2;
+first->next=second;
+second->data=3;
+second->next=third;
+third->data=4;
+third->next=fouth;
+fouth->data=5;
+fouth->next=fifth;
+fifth->data=6;
+fifth->next=NULL;
+print(head);
+	
+}
