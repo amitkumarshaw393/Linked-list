@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+struct node{
+    int data;
+    node *next;
+};
+void print(node *head)
+{
+	int count=0;
+	if(head!=NULL)
+	{
+		while(head!=NULL)
+		{
+			cout<<head->data<<endl;
+			head=head->next;
+			count++;
+		}
+	}
+	cout<<endl;
+	cout<<"No of element present = "<<count;
+}
+node *push(node *head,int Data)
+{
+	node *newnode=new node();
+	newnode->data=Data;
+	newnode->next=head;
+	head=newnode;
+}
+
+int main()
+{
+	node *head=NULL;
+	int n,a;
+	cout<<"No of element to be inserted";
+	cin>>n;
+	while(n!=0)
+	{
+	cin>>a;	
+	head=push(head,a);
+	n=n-1;
+	}
+	
+		print(head);
+}
